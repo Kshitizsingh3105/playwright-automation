@@ -2,7 +2,7 @@ const{test,expect}=require('@playwright/test');
 test('Home Page,',async({page})=>{
 await page.goto('https://www.aifluency.ai/version-test');
 
-const pageTitle=page.title();
+const pageTitle=await page.title();
 console.log('page title is:',pageTitle);
 
 await expect(page).toHaveTitle('Welcome to AI Fluency!');
