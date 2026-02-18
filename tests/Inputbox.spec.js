@@ -11,9 +11,10 @@ await expect (await page.locator("input[@id='name']")).toBeEditable();
 await expect (await page.locator("input[@id='name']")).toBeEnabled();
 await expect (await page.locator("input[@id='name']")).toBeVisible();
 
-await page.locator("input[@id='name'").fill('John')
+await page.locator("input[@id='name'").fill('John')  
     // page.fill("input[@id='name']",'John');
      
+
 await page.waitForTimeout(5000); //pausing code
 
 })
