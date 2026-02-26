@@ -9,9 +9,15 @@ const fromCityOptions=await page.$$("//li[contains(@class,'sc-iwsKbI')]/div/text
 for (let option of fromCityOptions)
 
     {
-        const value = await option.textContent()
-        console.log(value);
+         const value = await option.textContent()
 
+        // console.log(value);
+if(value.includes('Anand vihar'))
+{
+    await option.click()
+    break;
+    
+}
     }
     await page.waitForTimeout(3000)
 })
